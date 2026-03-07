@@ -34,5 +34,4 @@ SELECT colums FROM "nameTab" ORDER BY "Column1" ASC;
 
 Por ultimo cabe mensionar que no es necesario que la columna que se usa en el ORDER BY no debe ser obligatoriamente numerica, tambien puede ser de tipo texto, siendo que en ese caso se ordenaria de manera alfabetica ya sea ASC o DESC, como el siguiente ejemplo: 
 
-![alt text](imagenes/ORDER%20BY_03.png
-)
+![alt text](imagenes/ORDER%20BY_03.png)
