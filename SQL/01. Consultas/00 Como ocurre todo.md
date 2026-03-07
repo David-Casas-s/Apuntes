@@ -60,4 +60,6 @@ La sentencia anterior dara error, puesto que la "Columna" impuestos a la cual ha
 SELECT "Precio" * 0.15 AS "IMPUESTOS"
 FROM "PRODUCTOS"
 WHERE ("Precio"*0.15) > 100;
+
+Prueba de edicion desde gtihub
 ```
