@@ -61,5 +61,4 @@ SELECT "Precio" * 0.15 AS "IMPUESTOS"
 FROM "PRODUCTOS"
 WHERE ("Precio"*0.15) > 100;
 
-Prueba de edicion desde gtihub
 ```
