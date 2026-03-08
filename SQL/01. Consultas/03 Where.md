@@ -9,8 +9,8 @@ En este caso someColumn hace referencia a cualquier columna de la tabla de la cu
 
 Acontinuación un ejemplo practico de como se puede usar esta sentencia: 
 
-![alt text](imagenes/WHERE_01.png)
+![alt text](Imagenes/WHERE_01.png)
 
 En esta se puede apreciar como la consulta solo muestra los registros que presentan una edad mayor a uno del registro original: 
 
-![alt text](imagenes/SELECT_03.png)
+![alt text](Imagenes/SELECT_03.png)

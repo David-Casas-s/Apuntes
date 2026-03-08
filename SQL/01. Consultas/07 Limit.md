@@ -8,10 +8,10 @@ SELECT "columna1" FROM "nameTab" LIMIT numero_filas;
 
 --Ejemplo:
 
-![alt text](imagenes/LIMIT_01.png)
+![alt text](Imagenes/LIMIT_01.png)
 
 --Al igual que con las sentencias anteriros, LIMIT puede combinarse con otras clausulas como WHERE, ORDER BY, etc.
 
 --Ejemplo: 
 
-![alt text](imagenes/LIMIT_02.png)
+![alt text](Imagenes/LIMIT_02.png)
