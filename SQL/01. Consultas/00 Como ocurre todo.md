@@ -46,6 +46,8 @@ Se define como orden logico el debido proceso que realiza un SGBD a la hora de r
 
 **7.LIMT:** Esta sentencia hace que no se muestres todas las filas que puedan cumplir con el SELECT propuesto.
 
+![alt text](Imagenes/ORDEM_01.png)
+
 Con el siguiente ejemplo se intentara mostar porque es importante saber reconocer la gerarquie entre las sentencias: 
 
 ```SQL
