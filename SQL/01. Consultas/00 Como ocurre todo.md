@@ -64,12 +64,4 @@ FROM "PRODUCTOS"
 WHERE ("Precio"*0.15) > 100;
 
 ```
-
-Una vez realizado el tratamiento correspondientes al laboratorio Estudio de la amplitud de las oscilaciones armónicas amortiguadas y forzadas se pudo apreciar lo siguiente: 
-
-En la fase no se pudo evidenciar el amortiguamiento presente en tres modelos diferentes, mediante el uso de los gráficos se puedo evidenciar en mayor medida como estaba presente el amortiguamiento en los distintos sistemas, si bien en el sistema no amortiguado se presente un cierto nivel de amortiguamiento esto se debe a que la practica se realiza en un entorno no ideal, por parte de los otros dos modelos se puede apreciar mejor el amortiguamiento en mayor medida.
-
-En la segunda fase, se pudo evidenciar como varia la función posición en términos del tiempo, en los cuales se puede evidenciar el amortiguamiento en los 3 casos, siendo que el primero presenta un cierto nivel de amortiguamiento ya que como se menciona aun existe un cierto nivel de amortiguamiento 
-
-En la fase 3, se analizo los picos de resonancia para 3 modelos amortiguados forzados, el motivo por el cual no se puede apreciar tanto el pico de resonancia es porque debido a la sensibilidad del instrumento que se usao para generar las oscilaciones forzado, no se pudieron tomar valores tan cercanos al pico.
  
