@@ -42,14 +42,24 @@ Esta es la forma *no normalizada* de una base de datos. En este estado, una sola
 
 ## Concepto clave: Dependencia Parcial
 
-Antes de 2FN es importante entender este concepto. Una **dependencia parcial** ocurre cuando un atributo depende solo de *una parte* de una clave primaria compuesta, no de la clave completa.
+Antes de 2FN es importante entender este concepto. Una **dependencia parcial** ocurre cuando un atributo depende solo de *una parte* de una clave primaria compuesta. Con clave compuesta nos referimos a que la tabla tiene dos o más atributos que juntos forman la clave primaria, es decir, se necesitan ambos para identificar de forma única cada fila.
 
 **Ejemplo:**
 ```sql
-Clave primaria: (empleado_id, proyecto_id)
-nombre_empleado → depende SOLO de empleado_id  ❌
+-- Clave primaria compuesta: (empleado_id, departamento_id, id_proyecto)
+EMPLEADO(empleado_id, departamento_id, id_proyecto,
+         nombre_empleado, nombre_departamento, nombre_proyecto)
+
+-- nombre_empleado      → depende SOLO de empleado_id      ❌ parcial
+-- nombre_departamento  → depende SOLO de departamento_id  ❌ parcial
+-- nombre_proyecto      → depende SOLO de id_proyecto      ❌ parcial
 ```
-`nombre_empleado` debería estar en su propia tabla.
+
+Cada uno de esos atributos debería vivir en su propia tabla.
+
+> **Nota:** Las dependencias parciales surgen naturalmente en relaciones **N:M** 
+> (muchos a muchos), que son las que generan claves compuestas. En relaciones 
+> **1:N** no hay clave compuesta y por ende no hay dependencias parciales.
 
 ---
 
@@ -57,7 +67,20 @@ nombre_empleado → depende SOLO de empleado_id  ❌
 
 **Regla:** Cumplir 1FN y **eliminar todas las dependencias parciales**. Todo atributo no clave debe depender de la clave primaria *completa*.
 
-Esto se logra separando los datos en nuevas tablas relacionadas mediante claves foráneas.
+Para lograrlo, se separan los componentes de la clave primaria compuesta y cada uno se convierte en la clave primaria de su propia tabla. Las relaciones entre tablas se mantienen mediante **claves foráneas**.
+
+**Ejemplo:**
+```sql
+-- ✅ Después de aplicar 2FN
+
+-- Relaciones 1:N → FK directa, sin tabla intermedia
+EMPLEADO    (empleado_id PK,     nombre_empleado, departamento_id FK)
+DEPARTAMENTO(departamento_id PK, nombre_departamento)
+
+-- Relación N:M → tabla intermedia
+PROYECTO    (id_proyecto PK,     nombre_proyecto)
+ASIGNACION  (empleado_id FK,     id_proyecto FK)
+```
 
 ![Ejemplo 2FN](NotasExpo/NORMALIZACION_03.png)
 
